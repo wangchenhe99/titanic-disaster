@@ -81,3 +81,12 @@ y_test_pred = model.predict(X_test_final)
 # 18. Measure the accuracy of your model on the test set.
 print("\n18. first 10 Predictions on test.csv:")
 print(y_test_pred[:10]) 
+
+output = pd.DataFrame({
+    "PassengerId": test_df["PassengerId"],
+    "Survived": y_test_pred
+})
+
+output_path = "src/data/predictions_py.csv"
+output.to_csv(output_path, index=False)
+print(f"\nPredictions saved to {output_path}")
