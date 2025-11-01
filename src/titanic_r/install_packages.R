@@ -1,2 +1,2 @@
-install.packages(c("dplyr", "tidyr"), repos = "https://cloud.r-project.org")
-
+# No external packages are required for this project
+print("No additional R packages are needed. Using base R only.")
