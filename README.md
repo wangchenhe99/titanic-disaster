@@ -77,8 +77,7 @@ PassengerId,Survived
 **1. Build the Docker image**
 
 ```bash
-cd src/titanic_r
-docker build -t titanic-r .
+docker build -t titanic-r -f src/titanic_r/Dockerfile .
 ```
 
 
@@ -86,6 +85,7 @@ docker build -t titanic-r .
 
 ```bash
 docker run --rm -v "$(pwd)/src/data:/app/data" titanic-r
+
 ```
 
 **3. Expected Output**
